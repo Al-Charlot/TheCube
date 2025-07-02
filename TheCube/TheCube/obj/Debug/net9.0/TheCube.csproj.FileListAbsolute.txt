@@ -1,0 +1,14 @@
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\obj\Debug\net9.0\TheCube.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\obj\Debug\net9.0\TheCube.AssemblyInfoInputs.cache
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\obj\Debug\net9.0\TheCube.AssemblyInfo.cs
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\obj\Debug\net9.0\TheCube.csproj.CoreCompileInputs.cache
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\bin\Debug\net9.0\TheCube.exe
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\bin\Debug\net9.0\TheCube.deps.json
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\bin\Debug\net9.0\TheCube.runtimeconfig.json
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\bin\Debug\net9.0\TheCube.dll
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\bin\Debug\net9.0\TheCube.pdb
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\obj\Debug\net9.0\TheCube.dll
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\obj\Debug\net9.0\refint\TheCube.dll
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\obj\Debug\net9.0\TheCube.pdb
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\obj\Debug\net9.0\TheCube.genruntimeconfig.cache
+C:\Users\AlexanderCharlot\OneDrive - Versaterm Inc\Documents\C# Training\TheCube\TheCube\obj\Debug\net9.0\ref\TheCube.dll
