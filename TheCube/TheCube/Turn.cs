@@ -1,10 +1,3 @@
-using System.Collections.ObjectModel;
-using System.Data;
-using System.Data.Common;
-using System.Drawing;
-using System.Net.Sockets;
-using System.Security.Authentication.ExtendedProtection;
-
 namespace TheCube
 {
     /// <summary>
@@ -13,12 +6,25 @@ namespace TheCube
     /// </summary>
     public class Turn : ITurnable
     {
+        // Note: these references do not always hold true as the cube is rotated
+        // the logic is still the same so it is irrelevant
 
+        /* Short hand for the back of the cube */
         private static Colors BACK = Colors.Green;
+
+        /* Short hand for the front of the cube */
         private static Colors FRONT = Colors.Blue;
+
+        /* Short hand for the top of the cube */
         private static Colors TOP = Colors.White;
+
+        /* Short hand for the bottom of the cube */
         private static Colors BOTTOM = Colors.Yellow;
+
+        /* Short hand for the left of the cube */
         private static Colors LEFT = Colors.Red;
+
+        /* Short hand for the right of the cube */
         private static Colors RIGHT = Colors.Orange;
         public Turn()
         {
@@ -115,19 +121,6 @@ namespace TheCube
                     {
                         // set that face to the left
                         state[i].Facing = LEFT;
-                        // // if face 1 is facing the back
-                        // if (state[i].F1.Facing == BACK)
-                        // {
-                        //     // then the other face must be facing the left, so should now be facing
-                        //     // the bottom
-                        //     state[i].F2.Facing = BOTTOM;
-                        // }
-                        // else
-                        // {
-                        //     // if the first face is not facing the back then it must be facing the
-                        //     // right, so should now be facing the top
-                        //     state[i].F1.Facing = TOP;
-                        // }
                     }
                     else if (state[i].Facing == LEFT)
                     {
@@ -142,8 +135,6 @@ namespace TheCube
                         state[i].Facing = TOP;
                     }
                 }
-
-
             }
             else
             {

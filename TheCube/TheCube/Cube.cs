@@ -1,10 +1,4 @@
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Linq.Expressions;
 using System.Text;
-using System.Xml.Serialization;
-using System.Xml;
-using System.ComponentModel.Design;
 
 namespace TheCube
 {
@@ -26,7 +20,7 @@ namespace TheCube
         public Piece[] cubeState = new Piece[8];
 
         /* The number of pieces on the cube */
-        public static int NUMPIECES = 8;
+        public static int NUM_PIECES = 8;
 
         /// <summary>
         /// Constructor for the Cube class
@@ -37,8 +31,7 @@ namespace TheCube
         {
             solvedState = init.getPieces();
             solvedState = OrderCubeState(solvedState);
-            cubeState = solvedState.Select(p => new Piece(p.F1.Color, p.F2.Color, p.F3.Color,
-                                                          p.Position, p.Facing)).ToArray();
+            solveCube();
         }
 
 
@@ -53,7 +46,8 @@ namespace TheCube
             str.AppendLine("-----Menu-----");
             str.Append("1: Move Options");
             str.Append(" | 2: Scramble");
-            str.AppendLine(" | 0: Quit");
+            str.Append(" | 3: Reset");
+            str.Append(" | 0: Quit");
 
             while (loopVar)
             {
@@ -98,6 +92,9 @@ namespace TheCube
                     case "2":
                         displayToUser(scramble());
                         break;
+                    case "3":
+                        solveCube();
+                        break;
                     // quit the application
                     case "0":
                         toReturn = false;
@@ -114,6 +111,12 @@ namespace TheCube
             }
 
             return toReturn;
+        }
+
+        private void solveCube()
+        {
+            cubeState = solvedState.Select(p => new Piece(p.F1.Color, p.F2.Color, p.F3.Color,
+                                                          p.Position, p.Facing)).ToArray();
         }
 
         /// <summary>
@@ -143,7 +146,7 @@ namespace TheCube
             str.Append(" | 14: Spin'");
             str.Append(" | 15: Roll");
             str.Append(" | 16: Roll'");
-            str.AppendLine(" | 0: Go Back");
+            str.Append(" | 0: Go Back");
 
             while (loopVar)
             {
@@ -275,19 +278,18 @@ namespace TheCube
         /// </summary>
         private void printCubeState()
         {
+            // get the 3 faces to display
             char[] top = printCubeSide(Moves.U);
             char[] left = printCubeSide(Moves.L);
             char[] front = printCubeSide(Moves.F);
-            // spacing print
-            displayToUser("");
-
+            // displays the ascii representation
             displayToUser($@"
              _⎽⎽⎼⎼⎻⎻⎺⎺‾ {top[1]}‾⎺⎺⎻⎻⎼⎼⎽⎽_
             |  {top[0]}  ‾⎺_⎽⎼⎼⎻⎻⎺‾⎽_  {top[3]}  |
             |‾⎺⎺⎻⎻⎼⎼⎽⎽_ {top[2]} _⎽⎼⎼⎻⎻⎺⎺‾|
             |  {left[0]}  |  {left[1]}  |  {front[0]}  |  {front[1]} |
             |‾⎺⎺⎻⎻⎼⎼⎽⎽_ | _⎽⎽⎼⎼⎻⎻⎺⎺|
-            |  {left[2]}  |  {left[3]}  | {front[2]}   | {front[3]}  |
+            |  {left[2]}  |  {left[3]}  |  {front[2]}  | {front[3]}  |
              ‾⎺⎺⎻⎻⎼⎼⎽⎽_ | _⎽⎽⎼⎼⎻⎻⎺⎺");
         }
 
@@ -360,7 +362,8 @@ namespace TheCube
             str.Append((char)colorsToDisplay[3]);
             str.AppendLine("|");
 
-            return [(char)colorsToDisplay[0], (char)colorsToDisplay[1], (char)colorsToDisplay[2], (char)colorsToDisplay[3]];
+            return [(char)colorsToDisplay[0], (char)colorsToDisplay[1],
+                    (char)colorsToDisplay[2], (char)colorsToDisplay[3]];
         }
 
         /// <summary>
@@ -542,6 +545,8 @@ namespace TheCube
         /// </returns>
         private String? askForInput()
         {
+            Console.WriteLine();
+            Console.Write("Input: ");
             return Console.ReadLine();
         }
 
@@ -640,7 +645,7 @@ namespace TheCube
                 }
             }
             //If the cube is in a solved state, return true
-            if (count == NUMPIECES)
+            if (count == NUM_PIECES)
             {
                 toReturn = true;
             }
