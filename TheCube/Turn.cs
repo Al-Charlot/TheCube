@@ -35,14 +35,17 @@ namespace TheCube
         /// Function that updates the positions, and orientations of all affected pieces 
         /// for each move that is possible
         /// </summary>
-        /// <param name="action"></param>
+        /// <param name="action">
         /// A char that represents the action the move the user wants to make 
         /// (Moves enum) (follows standard cube notation: https://myrubik.com/en/notation/2x2x2)
-        /// <param name="isPrime"></param>
+        /// </param>
+        /// <param name="isPrime">
         /// Bool value is true if the move is a prime move (L') and false
         /// if the move is not prime (L)
-        /// <param name="state"></param>
+        /// </param>
+        /// <param name="state">
         /// The current sate of the cube that you wish to modify
+        /// </param>
         /// <returns>
         /// A modified version of the state array that was passed in after the move has been
         /// executed.

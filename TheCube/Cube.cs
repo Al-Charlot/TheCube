@@ -552,6 +552,15 @@ namespace TheCube
             return Console.ReadLine();
         }
 
+        /// <summary>
+        /// Displays the output to the user, in this case that is to the console.
+        /// </summary>
+        /// <typeparam name="T">
+        /// The type of output, generally int, string, or string builder.
+        /// </typeparam>
+        /// <param name="output">
+        /// The output to be displayed to the user.
+        /// </param>
         private void displayToUser<T>(T output)
         {
             Console.WriteLine();
